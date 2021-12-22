@@ -1,5 +1,4 @@
-// Brute force approach
-
+// Brute force approach runs in O(N^2)
 const twoSum = (list, target) => {
   for (let i = 0; i < list.length; i++) {
     for (let j = i + 1; j < list.length; j++) {
@@ -10,6 +9,7 @@ const twoSum = (list, target) => {
   }
 };
 
+// Two pass approach runs in O(2*N)
 const twoSum2 = (list, target) => {
   let hashMap = {};
 
@@ -24,7 +24,7 @@ const twoSum2 = (list, target) => {
     }
   }
 };
-
+// Two pass approach runs in O(N)
 const twoSum3 = (list, target) => {
   let hashMap = {};
 
