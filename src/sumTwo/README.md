@@ -2,29 +2,31 @@
 
 [Source]('https://leetcode.com/problems/two-sum/')
 
+_Note: Ensure to uncomment codes to the defined approaches to test solutions. at `index.js`_
+
 ### Approach 1: Using brute force
 
-Brute force is reffered a non optimized approch to solve the problem. below are the required steps to solve the two-sum problem. brute force is basically the first approach taken to solve a problem (direct form).
+Brute force is a basically the first approach and as well a non optimized solution to a algorithmic problem. Below includes the brute forced approach steps to solve the two-sum coding challenge excercise.
 
-1. iterate through the array two twice to get the both (two) values that sums to the target value (nested loop).
+1. iterate through the array twice to get the first iteration value and the second iteration values that sums to the target value (using nested loop).
 2. check if the sum of the first-iteration value and second-iteration value is the same as the `target` value.
 3. if step 2, is true return the position(indices) of both the first-iteration and second-iteration values of the array. Otherwise go back to step 1.
 
 Facts about the brute force approach:
 
-- It uses the nested loop concept to iterate the values od the array which runtime can be O(N) \* O(NUMBER OF NESTED LOOPS).
+- It uses the nested loop concept to iterate the values of the array which runtime can be O(N).
 - Due the fact that we would iterate through the array twice to get sum of the value that would be equal to the `target` value. the runtime of these solution would be O(N^2) or Exponential time complexity.
-- The O(N^2) runtime is considered as not optimal.
+- The O(N^2) runtime is considered as not optimal solution.
 
 ### Approach 2: Two Pass
 
-This solution approach also required to pass through each values in the array, for different operation (not nested) which is referred to as two pass (basically passing the array for different operation). below shows the solution approach to solve the problem.
+This solution uses the two-pass approach in which the iteration only required to go through array, to basically carry out the required operations. below shows the solution approach to solve the problem.
 
 step 1: iterate through the array first-time.
-step 2: store the iteration value as key and it index as the key-value in the hashMap (dictionary, object, associative array etc.).
+step 2: store the iteration value as key and it index as the value of the key in the hashMap (dictionary, object, associative array etc.).
 step 3: iterate through the array second-time.
 step 4: find the difference of both the `target` and itaraion value (`target - iteration-value`).
-step 5: if the difference value exist in the map, return the difference which is key(that holds the indices of as it value) in the hashMap and the current iteration-indices.
+step 5: if the difference value exist in the map, return the value of the key from the hashMap and the current iteration-indices.
 
 Facts about the two-pass solution approach
 
@@ -33,7 +35,7 @@ Facts about the two-pass solution approach
 
 ### Approach 3: One Pass
 
-The one pass solution only need to pass through the array once, then adds the itearation value and it index to the hashMap table, only when the value doesn't exist in the map. below include the steps to solve the problem.
+The one pass solution approach only need to pass through the array once, then adds the itearation value and it index to the hashMap table, only when the value doesn't exist in the map. below include the steps to solve the problem.
 
 1. pass through the array once.
 2. find difference of both `target` value and iteration value.
