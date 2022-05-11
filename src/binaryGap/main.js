@@ -1,4 +1,4 @@
-import sample from '.';
+import binaryGap from '.';
 
 const result = sample(10);
 
